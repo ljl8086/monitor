@@ -1,6 +1,5 @@
 package com.na.monitor.core;
 
-import org.springframework.beans.factory.annotation.Configurable;
 import org.springframework.beans.factory.annotation.Value;
 
 import java.io.Serializable;
@@ -46,7 +45,9 @@ public class NodeData implements Serializable{
     }
 
     public void setContextPath(String contextPath) {
-        this.contextPath = contextPath;
+        if(contextPath.trim().length()>0) {
+            this.contextPath = contextPath;
+        }
     }
 
     public String getServerAddress() {

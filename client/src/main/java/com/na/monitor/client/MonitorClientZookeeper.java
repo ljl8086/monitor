@@ -20,7 +20,7 @@ public class MonitorClientZookeeper {
     private String applicationName;
     @Value("${server.port:8080}")
     private int serverPort;
-    @Value("${server.context-path}")
+    @Value("${server.context-path:}")
     private String contextPath;
     private String serverAddress;
 
